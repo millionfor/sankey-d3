@@ -1,0 +1,62 @@
+{
+  "name": "Sankey-d3",
+  "version": "1.0.0",
+  "description": "Sankey-d3 plugin based on d3 chart",
+  "keywords": [
+    "Sankey",
+    "d3",
+    "chart"
+  ],
+  "license": "MIT",
+  "main": "dist/index.bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:millionfor/sankey-d3.git"
+  },
+  "scripts": {
+    "build": "npm run lint:fix && cross-env NODE_ENV=production webpack --config ./.build/webpack.config.prod.js",
+    "dev": "npm run lint:fix && cross-env NODE_ENV=development webpack-dev-server --config ./.build/webpack.config.dev.js --hot",
+    "lint": "standard \"**/*.{js,vue}\"",
+    "lint:fix": "standard \"**/*.{js,vue}\" --fix",
+    "prepublishOnly": "npm run build",
+    "start": "npm run dev",
+    "test": "npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "fss-config": "^1",
+    "@fedor/progress-webpack-plugin": "^1",
+    "@fedor/standard": "latest",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.4",
+    "env-parse": "^1.0.5",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^1",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3",
+    "webpack-dev-server": "^2",
+    "webpack-merge": "^4.1.0"
+  },
+  "peerDependencies": {
+    "@vue/utils": "^1.0.0",
+    "vue": ">=2"
+  },
+  "standard": {
+    "ignore": [
+      "*.tmp"
+    ]
+  }
+}
